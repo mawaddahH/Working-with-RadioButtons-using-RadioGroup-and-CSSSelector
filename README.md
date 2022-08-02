@@ -1,5 +1,5 @@
 # Working-with-RadioButtons-using-RadioGroup-and-CSSSelector
-Assignment 2 W9D3 - SDA - Software QA Bootcamp
+Assignment 2 W9D2 - SDA - Software QA Bootcamp
 
 
 ## Table of contents
