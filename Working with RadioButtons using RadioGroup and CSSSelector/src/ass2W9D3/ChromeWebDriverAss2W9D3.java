@@ -14,7 +14,8 @@ public class ChromeWebDriverAss2W9D3 {
 
 	/**
 	 * Set up browser settings and open the application
-	 * @throws InterruptedException 
+	 * 
+	 * @throws InterruptedException
 	 */
 
 	@BeforeTest
@@ -33,36 +34,35 @@ public class ChromeWebDriverAss2W9D3 {
 	 * 
 	 * @throws InterruptedException
 	 */
-		@Test
-		public void LearnEnglishWebSite() throws InterruptedException {
-			
-			// find RadioButton
-			WebElement radioButton = driver.findElement(By.cssSelector("#radio-2"));
-			boolean isCheck1 = radioButton.isSelected();
-			System.out.println("is radioButton selected  "+isCheck1);
-			if(isCheck1) {
-				System.out.println("radioButton is selected by default");
-			}
-			else {
-				Actions action = new Actions(driver);
-				//Right click 
-				action.click(radioButton).build().perform();
-				System.out.println("radioButton is selected manally");
+	@Test
+	public void LearnEnglishWebSite() throws InterruptedException {
 
-			}
-			Thread.sleep(2000);
+		// find RadioButton
+		WebElement radioButton = driver.findElement(By.cssSelector("#radio-2"));
+		boolean isCheck1 = radioButton.isSelected();
+		System.out.println("is radioButton selected  " + isCheck1);
+		if (isCheck1) {
+			System.out.println("radioButton is selected by default");
+		} else {
+			Actions action = new Actions(driver);
+			// Right click
+			action.click(radioButton).build().perform();
+			System.out.println("radioButton is selected manally");
 
 		}
-		
-		/**
-		 * Tear down the setup after test completes
-		 */
-		@AfterTest
-		public void terminateBrowser() {
-			// Close the browser
-			driver.close();
+		Thread.sleep(2000);
 
-			// Quite the selenium
-			driver.quit();
-		}
+	}
+
+	/**
+	 * Tear down the setup after test completes
+	 */
+	@AfterTest
+	public void terminateBrowser() {
+		// Close the browser
+		driver.close();
+
+		// Quite the selenium
+		driver.quit();
+	}
 }
